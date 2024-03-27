@@ -1,10 +1,11 @@
 //構文
 //
 //
-//function 高階関数(コールバック関数){
-//  //処理
-//  //コールバック関数();
-//}
+
+// function 高階関数(コールバック関数) {
+//     //処理
+//     //コールバック関数();
+// }
 
 //
 //
@@ -61,22 +62,65 @@ washed(bring);
 //処理変更するところが一箇所で済む
 //第二引数も追加できる
 
+//
+//
+//
 //コールバック関数の実践文
+//
+//
+//
 
-const unfollow = function () {
+//フォロー削除のコールバック関数
+// const unfollow = function () {
+//     console.log("フォローを外しました");
+// };
+
+// const cancelTweet = function () {
+//     console.log("ツイートをキャンセルしました");
+// };
+
+// function confirmed(fn) {
+//     if (window.confirm("実行しますか？")) {
+//         fn();
+//     }
+// }
+
+// confirmed(function () {
+//     console.log("フォローを外しました");
+// });
+
+//
+//
+//githubのリポジトリを削除するコールバック関数
+//
+//
+
+// function confirmed(fn) {
+//     const input = window.prompt("実行しますか？");
+//     if (input === "実行") {
+//         fn(input);
+//     }
+// }
+
+// confirmed(function (input) {
+//     if (input === "実行") {
+//         console.log("リポジトリを削除");
+//     }
+// });
+
+//btn click event
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function () {
     console.log("フォローを外しました");
-};
+});
 
-const cancelTweet = function () {
-    console.log("ツイートをキャンセルしました");
-};
+console.log(btn);
 
-function confirmed(fn) {
-    if (window.confirm("実行しますか？")) {
-        fn();
-    }
-}
+//forEachのコールバック関数
+const foods = ["にんじん", "じゃがいも", "玉ねぎ"];
 
-confirmed(function () {
-    console.log("フォローを外しました");
+foods.forEach(function (food) {
+    console.log(food);
 });
